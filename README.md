@@ -6,6 +6,7 @@ Example API with CRUD for **Categories**, **Products** and **Extras**, and **Ord
 
 It tries to follow as the best coding practices.
 The decision to make money int, like banks, is because float problem when rounding.
+There's a Postman collection named `Starbucks.postman_collection` in this root folder.
 
 ## Requirements
 
