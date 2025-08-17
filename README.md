@@ -37,10 +37,21 @@ sail artisan migrate:fresh --seed
 curl -X POST http://localhost/api/orders \
   -H "Content-Type: application/json" \
   -d '{
-    "product_id": 1,
-    "quantity": 2,
-    "extras": [1,2],
-    "paid_cents": 1200
+    "products":[
+        {
+            "id": 1,
+            "quantity": 2,
+            "extras": [
+                1,
+                2
+            ]
+        },
+        {
+            "id": 2,
+            "quantity": 1
+        }
+    ],
+    "paid_cents": 2000
   }'
 ```
 
