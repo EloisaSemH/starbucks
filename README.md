@@ -119,25 +119,18 @@ curl -X POST http://localhost/api/orders \
 
 ```json
 {
-    "data": {
-        "id": 1,
-        "total_cents": 940,
-        "paid_cents": 1200,
-        "change_cents": 260,
-        "status": "completed",
-        "items": [
-            {
-                "product": { "id": 1, "name": "Latte" },
-                "quantity": 2,
-                "unit_price_cents": 350,
-                "line_total_cents": 940,
-                "extras": [
-                    { "id": 1, "name": "Cinnamon", "price_cents": 50 },
-                    { "id": 2, "name": "Syrup", "price_cents": 70 }
-                ]
-            }
-        ]
-    }
+    "products": [
+        {
+            "id": 1,
+            "quantity": 2,
+            "extras": [1, 2]
+        },
+        {
+            "id": 2,
+            "quantity": 1
+        }
+    ],
+    "paid_cents": 2000
 }
 ```
 
