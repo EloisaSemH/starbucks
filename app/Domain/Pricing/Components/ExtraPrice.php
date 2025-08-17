@@ -16,12 +16,7 @@ final class ExtraPrice implements PriceComponent
 
     public function total(): Money
     {
-        $sum = 0;
-        foreach ($this->extrasUnitPrices as $money) {
-            $sum += $money->cents();
-        }
-        //        $sum = array_sum(array_map(fn(Money $m) => $m->cents(), $this->extrasUnitPrices));
-
+        $sum = array_sum(array_map(fn(Money $money) => $money->cents(), $this->extrasUnitPrices));
         $extras = Money::fromInt($sum)->multiply($this->quantity);
         return $this->inner->total()->add($extras);
     }

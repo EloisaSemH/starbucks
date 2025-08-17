@@ -15,6 +15,7 @@ final class Money
     {
         return new self($cents);
     }
+
     public static function fromFloat(float $amount): self
     {
         return new self((int) round($amount * 100));
@@ -24,14 +25,17 @@ final class Money
     {
         return new self($this->cents + $other->cents);
     }
+
     public function multiply(int $quantity): self
     {
         return new self($this->cents * $quantity);
     }
+
     public function greaterThanOrEqual(Money $other): bool
     {
         return $this->cents >= $other->cents;
     }
+
     public function minus(Money $other): self
     {
         return new self(max(0, $this->cents - $other->cents));

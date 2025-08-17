@@ -59,11 +59,10 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Infrastructure\Persistence\Eloquent\Models\User::class),
-        ],
-
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => env('AUTH_MODEL', App\Infrastructure\Persistence\Eloquent\Models\User::class),
+        // ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

@@ -12,7 +12,7 @@ class MoneyTest extends TestCase
 {
     public function testAddAndMultiply(): void
     {
-        $money = Money::fromInt(350); // €3.50
+        $money = Money::fromInt(350);
         self::assertSame(700, $money->multiply(2)->cents());
 
         $money2 = Money::fromInt(50);
