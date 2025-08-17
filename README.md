@@ -71,7 +71,8 @@ curl -X POST http://localhost/api/orders \
 ```
 
 - GET /api/categories/{id}
-- PUT/PATCH /api/categories/{id} — { "name": "New name" }
+- PUT/PATCH /api/categories/{id}
+    - Request payload has the same structure as the `POST` endpoint
 - DELETE /api/categories/{id}
 
 ### Products
